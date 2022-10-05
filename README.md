@@ -9,15 +9,6 @@ The plugin is available on the Gradle Plugin Portal [here](https://plugins.gradl
 
 Here is example usage of the plugin:
 
-settings.gradle.kts
-```kts
-pluginManagement {
-    repositories {
-        gradlePluginPortal()
-    }
-}
-```
-
 build.gradle.kts
 ```kts
 dependencies {
