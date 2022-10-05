@@ -184,7 +184,7 @@ inline fun Project.mod(block: NecesseBuildDslExtension.() -> Unit) = (object : T
     }.block()
 
 fun DependencyHandler.necesse(project: Project, gamePath: String) {
-    add("implementation", project.files("$gamePath/Necesse.jar"))
-    add("implementation", project.fileTree("$gamePath/lib/"))
-    add("implementation", project.fileTree("./mods/"))
+    add("compileOnly", project.files("$gamePath/Necesse.jar"))
+    add("compileOnly", project.fileTree("$gamePath/lib/"))
+    add("compileOnly", project.fileTree("./mods/"))
 }
