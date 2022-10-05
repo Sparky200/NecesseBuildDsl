@@ -5,13 +5,20 @@ to create Necesse mods with easier syntax.
 
 ## Using Necesse Build DSL
 
-The plugin [will be] available on the
-Gradle Plugin Portal [here](https://plugins.gradle.org/plugin/dev.sparky200.necesse-build-dsl).
-
-In the meantime, clone and run `gradle publishToMavenLocal`.
+The plugin is available on the Gradle Plugin Portal [here](https://plugins.gradle.org/plugin/dev.sparky200.necesse-build-dsl).
 
 Here is example usage of the plugin:
 
+settings.gradle.kts
+```kts
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+```
+
+build.gradle.kts
 ```kts
 dependencies {
     // Depends on necesse automatically, as well as the
