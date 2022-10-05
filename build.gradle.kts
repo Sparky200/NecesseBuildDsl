@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "dev.sparky200"
-version = "1.1"
+version = "1.1.2"
 
 pluginBundle {
     website = "https://necessegame.com/"

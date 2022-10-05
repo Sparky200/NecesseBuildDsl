@@ -5,6 +5,7 @@ package dev.sparky200.necesse.gradle.build_dsl
 import org.gradle.api.DefaultTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.UnknownTaskException
 import org.gradle.api.artifacts.dsl.DependencyHandler
 import org.gradle.api.provider.Property
 import org.gradle.api.reflect.TypeOf
@@ -164,9 +165,11 @@ class NecesseBuildDsl : Plugin<Project> {
             }
         }
 
-        project.tasks.getByName("classes").apply {
-            dependsOn("createModInfo")
-        }
+        try {
+            project.tasks.getByName("classes").apply {
+                dependsOn("createModInfo")
+            }
+        } catch (ignored: UnknownTaskException) {}
     }
 }
 
